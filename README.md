@@ -1,4 +1,6 @@
-# radon.nvim
+# radon.nvim 
+
+🚧 in dev stage
 
 [example.webm](https://github.com/dromse/radon.nvim/assets/57846319/c9cf0b61-28d3-456e-9030-fc2734abb679)
 
