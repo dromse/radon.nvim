@@ -1,15 +1,6 @@
 local M = {}
 
---[[
-    Find component function line row.
-    To find it we need to use file name like component function name.
-    E.g. in Component.jsx/tsx/js/ts/any must contain Component = () => {} or function Component()
--- ]]
 local function get_component_function_line_id(curr_buf)
-	--[[
-        Find file name of component e.g. Component.jsx -> Component.
-        NOTE: Component.ext.jsx -> Component.ext
-    -- ]]
 	local file_name = vim.fn.expand '%:t:r'
 
 	for i, line in ipairs(vim.api.nvim_buf_get_lines(curr_buf, 1, -1, true)) do
@@ -39,7 +30,6 @@ M.generate_state = function(opts)
 
 	local spaces_indention = string.rep(' ', tabstop)
 
-	--[[ generate state function ]]
 	local state_hook = spaces_indention
 		.. 'const ['
 		.. name
@@ -49,12 +39,10 @@ M.generate_state = function(opts)
 		.. value
 		.. ')'
 
-	--[[ get current buffer ]]
 	local curr_buf = vim.api.nvim_get_current_buf()
 
 	local component_line_id = get_component_function_line_id(curr_buf)
 
-	--[[ insert state hook to buffer ]]
 	vim.api.nvim_buf_set_lines(
 		curr_buf,
 		component_line_id,
