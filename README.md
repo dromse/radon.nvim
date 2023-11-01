@@ -3,8 +3,7 @@
 > [!WARNING]
 > 🚧 in dev stage
 
-[example.webm](https://github.com/dromse/radon.nvim/assets/57846319/c9cf0b61-28d3-456e-9030-fc2734abb679)
-
+## 📜 Intro
 _radon.nvim_ is a Neovim plugin that allows you to quickly and easily generate React hooks, components, and directories using a simple Vim UI. It is a great tool for React developers of all experience levels, from beginners to experts.
 
 To use _radon.nvim_, simply type `:Radon` in Neovim to open the plugin menu. From here, you can select the type of React hooks, components or directories you want to generate and enter some basic information about it. _radon.nvim_ will then generate it for you.
@@ -17,14 +16,22 @@ Here are some of the benefits of using _radon.nvim_:
 
 If you are looking for a way to speed up your React development workflow, then _radon.nvim_ is the plugin for you. Give it a try today!
 
-## Install
+## 📦 Install
+
+1. Install via your favorite package manager
 
 ```lua
 -- Packer
 use 'dromse/radon.nvim'
 ```
 
-## Example
+2. Setup the plugin in your `init.lua`
+   
+```lua
+require('radon').setup()
+``` 
+
+## 🚀 Usage
 
 To generate a new React hook like useState, you would type the following command in Neovim:
 
