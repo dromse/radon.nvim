@@ -1,30 +1,60 @@
-# radon.nvim 
+# radon.nvim
 
-🚧 in dev stage
+> [!WARNING]
+> 🚧 in dev stage
 
 [example.webm](https://github.com/dromse/radon.nvim/assets/57846319/c9cf0b61-28d3-456e-9030-fc2734abb679)
 
-Fast generation of react hooks, components and directories.
+_radon.nvim_ is a Neovim plugin that allows you to quickly and easily generate React hooks, components, and directories using a simple Vim UI. It is a great tool for React developers of all experience levels, from beginners to experts.
 
-## Installation
+To use _radon.nvim_, simply type `:Radon` in Neovim to open the plugin menu. From here, you can select the type of React hooks, components or directories you want to generate and enter some basic information about it. _radon.nvim_ will then generate it for you.
+
+Here are some of the benefits of using _radon.nvim_:
+
+* **Speed:** _radon.nvim_ is very fast, and it can generate a new React hooks, components and directories from any place in seconds.
+* **Ease of use:** _radon.nvim_ has a simple and intuitive Vim UI, making it easy to use for developers of all experience levels.
+* **Flexibility:** _radon.nvim_ allows you to customize the generated code to your specific needs.
+
+If you are looking for a way to speed up your React development workflow, then _radon.nvim_ is the plugin for you. Give it a try today!
+
+## Install
 
 ```lua
 -- Packer
 use 'dromse/radon.nvim'
 ```
 
-## Usage
+## Example
 
-```lua
--- Using table argument.
-require('radon').generate_state({ name = 'simpleString', value = '"You simple string!"' --[[ or ]] '' })
--- --> const [simpleString, setSimpleString] = useState("You simple string!")
+To generate a new React hook like useState, you would type the following command in Neovim:
 
--- Show Vim UI
-require('radon').show_generate_state()
--- Input name: simpleString
--- Input default value: 'My simple string!' <-- You can left it empty.
--- --> const [simpleString, setSimpleString] = useState('My simple string!')
-
--- In UI you can cancel by press Ctrl + C
 ```
+:Radon state
+```
+
+_radon.nvim_ would then provide prompts for name and value to generate hook line:
+
+> [!NOTE]
+> To cancel operation press _`Ctrl + C`_
+
+```txt
+Input name: myState
+Input default value: 'My first generated state!'
+```
+
+we got line with our hook:
+
+```javascript
+import React from 'react';
+
+export function MyComponent() {
+  const [myState, setMyState] = useState('My first generated state!')
+  return (
+    <div>
+      <h1>My Component</h1>
+    </div>
+  );
+}
+```
+
+You can then customize the code to your needs as required.
