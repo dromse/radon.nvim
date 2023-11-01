@@ -6,7 +6,7 @@ local generate_useRef = require('radon.hooks.useRef').generate
 local M = {}
 
 M.setup = function(opts)
-	opts = opts or {}
+    opts = opts or {}
 
 	require('radon.command').setup()
 end
