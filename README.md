@@ -1,7 +1,8 @@
 # radon.nvim
 
 > [!WARNING]
-> 🚧 in dev stage
+> 🚧 in dev stage  
+> Currently I don't have idea what to add, if you have a proporsal, create an issue for me to consider it.
 
 ## 📜 Intro
 _radon.nvim_ is a Neovim plugin that allows you to quickly and easily generate React hooks, components, and directories using a simple Vim UI. It is a great tool for React developers of all experience levels, from beginners to experts.
